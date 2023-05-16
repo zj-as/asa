@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pers.zj.asa</groupId>
+    <artifactId>asa-dependencies</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>基础 bom 文件，管理整个项目的依赖版本</description>
+
+    <properties>
+        <revision>1.0.1-snapshot</revision>
+        <!-- 统一依赖管理 -->
+        <spring.boot.version>2.7.10</spring.boot.version>
+        <!-- 工具类相关 -->
+        <lombok.version>1.18.26</lombok.version>
+        <fastjson2.version>2.0.29</fastjson2.version>
+        <validator.version>8.0.0.Final</validator.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 统一依赖管理 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring 核心 -->
+            <dependency>
+                <!-- 用于生成自定义的 Spring @ConfigurationProperties 配置类的说明文件 -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- Web 相关 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <!-- 工具类相关 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <!--
+                Hibernate Validator 是 Bean Validation 规范的参考实现，提供了 JSR 380 规范中所有内置 constraint 的实现，
+                同时支持通过注解来声明 constraint 、自定义 constraint 以及编写 constraint annotation 。
+
+                * Hibernate Validator 和 Hibernate 持久层框架没有任何关系，只是 Hibernate 组织下的一个开源项目 *
+            -->
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${validator.version}</version>
+            </dependency>
+
+            <!-- 对技术组件进行管理，提供给其他模块使用 -->
+            <dependency>
+                <groupId>pers.zj.asa</groupId>
+                <artifactId>asa-common</artifactId>
+                <version>${revision}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

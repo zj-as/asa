@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>pers.zj.asa</groupId>
+        <artifactId>asa</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>asa-server</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        后端 Server 的主项目，通过引入需要 asa-module-xxx 的依赖，提供接口服务。
+        本质上来说，它就是个空壳（容器）！
+    </description>
+
+    <dependencies>
+
+    </dependencies>
+
+<!--    <build>-->
+<!--        &lt;!&ndash; 设置构建的 jar 包名 &ndash;&gt;-->
+<!--        <finalName>${project.artifactId}</finalName>-->
+<!--        <plugins>-->
+<!--            &lt;!&ndash; 打包 &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                &lt;!&ndash; 如果 spring.boot.version 版本修改，则这里也要跟着修改 &ndash;&gt;-->
+<!--                <version>2.7.10</version>-->
+<!--                <configuration>-->
+<!--                    <fork>true</fork>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            &lt;!&ndash; 将引入的 jar 打入其中 &ndash;&gt;-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
+</project>
