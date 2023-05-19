@@ -1,12 +1,13 @@
 package pers.zj.asa.framework.web.util.param;
 
+import org.springframework.lang.NonNull;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import java.util.List;
 import java.util.Objects;
 
-import static pers.zj.asa.framework.common.exception.consts.GlobalErrorCodeConstants.*;
+import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant.*;
 import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.exception;
 
 /**
@@ -20,9 +21,9 @@ public class ParamValidUtil {
     /**
      * 参数校验
      *
-     * @param bindingResult 约束结果
+     * @param bindingResult 绑定结果
      */
-    public static void valid(BindingResult bindingResult) {
+    public static void valid(@NonNull BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             // 获取所有错误信息
             List<FieldError> fieldErrorList = bindingResult.getFieldErrors();
@@ -69,10 +70,10 @@ public class ParamValidUtil {
     /**
      * 参数校验
      *
-     * @param bindingResult 约束结果
+     * @param bindingResult 绑定结果
      * @return 错误信息
      */
-    public static String validParam(BindingResult bindingResult) {
+    public static String validParam(@NonNull BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             List<FieldError> fieldErrorList = bindingResult.getFieldErrors();
             StringBuilder errorTips = new StringBuilder();

@@ -16,6 +16,7 @@
       <set>
         <option value="$PROJECT_DIR$/asa-common/pom.xml" />
         <option value="$PROJECT_DIR$/asa-framework/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/asa-module-system-api/pom.xml" />
       </set>
     </option>
   </component>

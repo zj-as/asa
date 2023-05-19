@@ -2,12 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for asa" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="asa-spring-boot-starter-web" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../Maven/Repository/org/springframework/boot/spring-boot-configuration-processor/2.7.11/spring-boot-configuration-processor-2.7.11.jar" />
+          <entry name="$PROJECT_DIR$/../../../Maven/Repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar" />
+          <entry name="$PROJECT_DIR$/../../../Maven/Repository/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../Maven/Repository/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="asa-module-infra-api" />
         <module name="asa-common" />
+        <module name="asa-module-infra-biz" />
+        <module name="asa-module-system-biz" />
+        <module name="asa-spring-boot-starter-web" />
+        <module name="asa-module-system-api" />
         <module name="asa-server" />
       </profile>
     </annotationProcessing>

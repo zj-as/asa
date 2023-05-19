@@ -1,4 +1,4 @@
-package pers.zj.asa.framework.common.exception.consts;
+package pers.zj.asa.framework.common.exception.constant;
 
 import pers.zj.asa.framework.common.exception.pojo.CommonCode;
 
@@ -12,7 +12,7 @@ import pers.zj.asa.framework.common.exception.pojo.CommonCode;
  * @author asa
  * @since 1.0.1
  */
-public interface GlobalCodeConstants {
+public interface GlobalCodeConstant {
 
     /** ========== 消息响应 100 – 199 ========== */
     CommonCode CONTINUE = new CommonCode(100, "请求继续");

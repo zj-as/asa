@@ -14,37 +14,47 @@
 
     <name>${project.artifactId}</name>
     <description>
-        后端 Server 的主项目，通过引入需要 asa-module-xxx 的依赖，提供接口服务。
+        后端 server 的主项目，通过引入需要 asa-module-xxx 的依赖，提供接口服务。
         本质上来说，它就是个空壳（容器）！
     </description>
 
     <dependencies>
+        <dependency>
+            <groupId>pers.zj.asa</groupId>
+            <artifactId>asa-module-system-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>pers.zj.asa</groupId>
+            <artifactId>asa-module-infra-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
     </dependencies>
 
-<!--    <build>-->
-<!--        &lt;!&ndash; 设置构建的 jar 包名 &ndash;&gt;-->
-<!--        <finalName>${project.artifactId}</finalName>-->
-<!--        <plugins>-->
-<!--            &lt;!&ndash; 打包 &ndash;&gt;-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                &lt;!&ndash; 如果 spring.boot.version 版本修改，则这里也要跟着修改 &ndash;&gt;-->
-<!--                <version>2.7.10</version>-->
-<!--                <configuration>-->
-<!--                    <fork>true</fork>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            &lt;!&ndash; 将引入的 jar 打入其中 &ndash;&gt;-->
-<!--                            <goal>repackage</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <build>
+        <!-- 设置构建的 jar 包名 -->
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- 打包 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 如果 spring.boot.version 版本修改，则这里也要跟着修改 -->
+                <version>2.7.10</version>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!-- 将引入的 jar 打入其中 -->
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

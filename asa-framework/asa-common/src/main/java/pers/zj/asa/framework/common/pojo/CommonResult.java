@@ -1,14 +1,14 @@
 package pers.zj.asa.framework.common.pojo;
 
-import com.sun.istack.internal.NotNull;
+import org.springframework.lang.NonNull;
 import pers.zj.asa.framework.common.exception.pojo.CommonCode;
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-import static pers.zj.asa.framework.common.exception.consts.GlobalCodeConstants.*;
-import static pers.zj.asa.framework.common.exception.consts.GlobalErrorCodeConstants.*;
+import static pers.zj.asa.framework.common.exception.constant.GlobalCodeConstant.*;
+import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant.*;
 import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.exception;
 
 /**
@@ -74,7 +74,7 @@ public class CommonResult<T> implements Serializable {
         return createCommonResult(SUCCESS_TRUE, OK.getCode(), OK.getMessage(), data);
     }
 
-    public static <T> CommonResult<T> success(@NotNull CommonCode commonCode) {
+    public static <T> CommonResult<T> success(@NonNull CommonCode commonCode) {
         checkSuccessCode(commonCode.getCode());
         return createCommonResult(SUCCESS_TRUE, commonCode.getCode(), commonCode.getMessage(), null);
     }
@@ -83,12 +83,12 @@ public class CommonResult<T> implements Serializable {
         return createCommonResult(SUCCESS_TRUE, OK.getCode(), message, data);
     }
 
-    public static <T> CommonResult<T> success(String message, @NotNull CommonCode commonCode) {
+    public static <T> CommonResult<T> success(String message, @NonNull CommonCode commonCode) {
         checkSuccessCode(commonCode.getCode());
         return createCommonResult(SUCCESS_TRUE, commonCode.getCode(), message, null);
     }
 
-    public static <T> CommonResult<T> success(T data, @NotNull CommonCode commonCode) {
+    public static <T> CommonResult<T> success(T data, @NonNull CommonCode commonCode) {
         checkSuccessCode(commonCode.getCode());
         return createCommonResult(SUCCESS_TRUE, commonCode.getCode(), commonCode.getMessage(), data);
     }
@@ -101,7 +101,7 @@ public class CommonResult<T> implements Serializable {
         return createCommonResult(SUCCESS_FALSE, INTERNAL_SERVER_ERROR.getCode(), message, null);
     }
 
-    public static <T> CommonResult<T> error(@NotNull ErrorCode errorCode) {
+    public static <T> CommonResult<T> error(@NonNull ErrorCode errorCode) {
         return createCommonResult(SUCCESS_FALSE, errorCode.getCode(), errorCode.getMessage(), null);
     }
 

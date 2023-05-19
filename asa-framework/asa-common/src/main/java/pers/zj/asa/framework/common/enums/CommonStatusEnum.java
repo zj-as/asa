@@ -1,6 +1,6 @@
 package pers.zj.asa.framework.common.enums;
 
-import static pers.zj.asa.framework.common.exception.consts.GlobalErrorCodeConstants.*;
+import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant.*;
 import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.exception;
 
 /**

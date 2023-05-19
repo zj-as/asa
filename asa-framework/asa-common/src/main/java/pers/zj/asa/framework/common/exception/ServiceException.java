@@ -1,7 +1,7 @@
 package pers.zj.asa.framework.common.exception;
 
-import com.sun.istack.internal.NotNull;
-import pers.zj.asa.framework.common.exception.consts.ServiceErrorCodeRange;
+import org.springframework.lang.NonNull;
+import pers.zj.asa.framework.common.exception.constant.ServiceErrorCodeConstant;
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 
 import java.util.Objects;
@@ -17,7 +17,7 @@ public class ServiceException extends RuntimeException {
     /**
      * 业务错误码
      *
-     * @see ServiceErrorCodeRange
+     * @see ServiceErrorCodeConstant
      */
     private Integer code;
 
@@ -33,7 +33,7 @@ public class ServiceException extends RuntimeException {
 
     }
 
-    public ServiceException(@NotNull ErrorCode errorCode) {
+    public ServiceException(@NonNull ErrorCode errorCode) {
         this.code = errorCode.getCode();
         this.message = errorCode.getMessage();
     }

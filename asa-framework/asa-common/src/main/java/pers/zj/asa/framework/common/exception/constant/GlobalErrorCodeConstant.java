@@ -1,4 +1,4 @@
-package pers.zj.asa.framework.common.exception.consts;
+package pers.zj.asa.framework.common.exception.constant;
 
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 
@@ -12,7 +12,7 @@ import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
  * @author asa
  * @since 1.0.1
  */
-public interface GlobalErrorCodeConstants extends GlobalCodeConstants {
+public interface GlobalErrorCodeConstant extends GlobalCodeConstant {
 
     /** ========== 客户端错误 400 – 499 ========== */
     ErrorCode BAD_REQUEST = new ErrorCode(400, "错误请求");

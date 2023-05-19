@@ -1,6 +1,6 @@
 package pers.zj.asa.framework.web.controllert;
 
-import com.sun.istack.internal.NotNull;
+import org.springframework.lang.NonNull;
 import pers.zj.asa.framework.common.exception.pojo.CommonCode;
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 import pers.zj.asa.framework.common.pojo.CommonResult;
@@ -25,7 +25,7 @@ public class BaseController {
         return CommonResult.success(data);
     }
 
-    protected <T> CommonResult<T> success(@NotNull CommonCode commonCode) {
+    protected <T> CommonResult<T> success(@NonNull CommonCode commonCode) {
         return CommonResult.success(commonCode);
     }
 
@@ -33,11 +33,11 @@ public class BaseController {
         return CommonResult.success(message, data);
     }
 
-    protected <T> CommonResult<T> success(String message, @NotNull CommonCode commonCode) {
+    protected <T> CommonResult<T> success(String message, @NonNull CommonCode commonCode) {
         return CommonResult.success(message, commonCode);
     }
 
-    protected <T> CommonResult<T> success(T data, @NotNull CommonCode commonCode) {
+    protected <T> CommonResult<T> success(T data, @NonNull CommonCode commonCode) {
         return CommonResult.success(data, commonCode);
     }
 
@@ -49,7 +49,7 @@ public class BaseController {
         return CommonResult.error(message);
     }
 
-    protected <T> CommonResult<T> error(@NotNull ErrorCode errorCode) {
+    protected <T> CommonResult<T> error(@NonNull ErrorCode errorCode) {
         return CommonResult.error(errorCode);
     }
 

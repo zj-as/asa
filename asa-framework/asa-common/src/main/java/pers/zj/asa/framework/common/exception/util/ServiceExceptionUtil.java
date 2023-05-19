@@ -1,6 +1,6 @@
 package pers.zj.asa.framework.common.exception.util;
 
-import com.sun.istack.internal.NotNull;
+import org.springframework.lang.NonNull;
 import pers.zj.asa.framework.common.exception.ServiceException;
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 
@@ -20,24 +20,24 @@ public class ServiceExceptionUtil {
      */
     private static final ConcurrentMap<Integer, String> MESSAGES_MAP = new ConcurrentHashMap<>();
 
-    public static void put(@NotNull Integer code, String message) {
+    public static void put(@NonNull Integer code, String message) {
         ServiceExceptionUtil.MESSAGES_MAP.put(code, message);
     }
 
-    public static void delete(@NotNull Integer code, String message) {
+    public static void delete(@NonNull Integer code, String message) {
         ServiceExceptionUtil.MESSAGES_MAP.remove(code, message);
     }
 
-    public static ServiceException exception(@NotNull ErrorCode errorCode) {
+    public static ServiceException exception(@NonNull ErrorCode errorCode) {
         MESSAGES_MAP.put(errorCode.getCode(), errorCode.getMessage());
         return exception(errorCode.getCode(), errorCode.getMessage());
     }
 
-    public static ServiceException exception(@NotNull Integer code) {
+    public static ServiceException exception(@NonNull Integer code) {
         return exception(code, MESSAGES_MAP.get(code));
     }
 
-    public static ServiceException exception(@NotNull Integer code, String message) {
+    public static ServiceException exception(@NonNull Integer code, String message) {
         return new ServiceException(code, message);
     }
 

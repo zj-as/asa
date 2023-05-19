@@ -1,7 +1,7 @@
 package pers.zj.asa.framework.common.exception;
 
-import com.sun.istack.internal.NotNull;
-import pers.zj.asa.framework.common.exception.consts.GlobalErrorCodeConstants;
+import org.springframework.lang.NonNull;
+import pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant;
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 
 import java.util.Objects;
@@ -17,7 +17,7 @@ public class ServerException extends RuntimeException {
     /**
      * 全局错误码
      *
-     * @see GlobalErrorCodeConstants
+     * @see GlobalErrorCodeConstant
      */
     private Integer code;
 
@@ -33,7 +33,7 @@ public class ServerException extends RuntimeException {
 
     }
 
-    public ServerException(@NotNull ErrorCode errorCode) {
+    public ServerException(@NonNull ErrorCode errorCode) {
         this.code = errorCode.getCode();
         this.message = errorCode.getMessage();
     }
