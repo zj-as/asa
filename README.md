@@ -1,15 +1,15 @@
 <h1 align="center">🎉阿沙的基础框架项目🎉</h1>
 <br/>
 <p align="center">
-  <a href="https://www.oracle.com/cn/java/technologies/downloads/#java8">
+  <a href="https://www.oracle.com/cn/java/technologies/downloads/#java8" target="_blank">
     <img alt="JDK-v8.0" src="https://img.shields.io/badge/JDK-v8.0-blue">
   </a>
 
-  <a href="https://spring.io/projects/spring-boot#overview">
+  <a href="https://spring.io/projects/spring-boot#overview" target="_blank">
     <img alt="SpringBoot-v2.7.11" src="https://img.shields.io/badge/SpringBoot-v2.7.11-blue">
   </a>
 
-  <a href="https://spdx.org/licenses/MIT">
+  <a href="https://spdx.org/licenses/MIT" target="_blank">
     <img alt="license-MIT" src="https://img.shields.io/badge/license-MIT-green">
   </a>
 </p>
