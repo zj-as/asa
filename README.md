@@ -1,6 +1,4 @@
-<p align="center">
-# 🎉阿沙的基础框架项目🎉
-</p>
+# <p align="center">🎉阿沙的基础框架项目🎉</p>
 <br/>
 <div style="text-align: center;">
 
