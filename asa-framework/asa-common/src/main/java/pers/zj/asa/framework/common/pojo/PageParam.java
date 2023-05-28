@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * 分页入参
+ * <p>分页入参</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -36,7 +36,7 @@ public class PageParam implements Serializable {
     private Integer pageSize =  PAGE_SIZE;
 
     /**
-     * 空构造方法，解决反序列化
+     * <p>空构造方法，解决反序列化</p>
      */
     public PageParam() {
 

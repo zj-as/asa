@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * {@link ServiceException} 工具类
+ * <p>{@link ServiceException} 工具类</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -42,7 +42,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * 私有化构造器
+     * <p>私有化构造器</p>
      */
     private ServiceExceptionUtil() {
 

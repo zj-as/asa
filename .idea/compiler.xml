@@ -14,10 +14,13 @@
           <entry name="$PROJECT_DIR$/../../../Maven/Repository/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
         </processorPath>
         <module name="asa-module-infra-api" />
+        <module name="asa-spring-boot-starter-excel" />
         <module name="asa-common" />
+        <module name="asa-module-test-biz" />
         <module name="asa-module-infra-biz" />
-        <module name="asa-module-system-biz" />
         <module name="asa-spring-boot-starter-web" />
+        <module name="asa-module-system-biz" />
+        <module name="asa-module-test-api" />
         <module name="asa-module-system-api" />
         <module name="asa-server" />
       </profile>

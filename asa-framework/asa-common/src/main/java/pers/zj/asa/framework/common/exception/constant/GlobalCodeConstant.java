@@ -3,11 +3,11 @@ package pers.zj.asa.framework.common.exception.constant;
 import pers.zj.asa.framework.common.exception.pojo.CommonCode;
 
 /**
- * 全局状态码常量
+ * <p>全局状态码常量</p>
  *
  * <p>0 - 999 为系统状态编码保留，一般情况下，使用
  * <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">HTTP 响应状态码</a>
- * ，HTTP 响应状态码作为业务使用表达能力偏弱，但是使用在系统层面还是非常不错的。
+ * 。HTTP 响应状态码作为业务使用表达能力偏弱，但是使用在系统层面还是非常不错的。</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -39,12 +39,12 @@ public interface GlobalCodeConstant {
     CommonCode PERMANENT_REDIRECT = new CommonCode(308, "URI 永久重定向");
 
     /**
-     * 是否为成功响应，参考 HTTP 2XX 状态码段
+     * <p>是否为成功响应，参考 HTTP 2XX 状态码段</p><br/>
      *
      * @param code 状态码
      * @return {@code true} 是，{@code false} 否
      */
-    static Boolean isSuccessCode(Integer code) {
+    static boolean isSuccessCode(Integer code) {
         return code != null && code >= OK.getCode() && code <= OK.getCode() + 99;
     }
 

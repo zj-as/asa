@@ -1,9 +1,13 @@
 package pers.zj.asa.framework.common.util.data;
 
+import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 /**
- * 时间工具类
+ * <p>时间工具类</p>
  *
- * <p>用于 {@link java.time.LocalDateTime} 。
+ * <p>用于 {@link LocalDateTime} 、{@link LocalDate} 、{@link LocalTime} 日期类。</p><br/>
  *
  * @author asa
  * @since 1.0.1

@@ -27,6 +27,7 @@
     <modules>
         <module>asa-common</module>
         <module>asa-spring-boot-starter-web</module>
+        <module>asa-spring-boot-starter-excel</module>
     </modules>
 
 </project>

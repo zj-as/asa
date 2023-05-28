@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>pers.zj.asa</groupId>
+        <artifactId>asa-module-test</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>asa-module-test-api</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>
+        test 模块 API ，开放给其它模块调用
+    </description>
+
+    <dependencies>
+        <!-- 技术组件 -->
+        <dependency>
+            <groupId>pers.zj.asa</groupId>
+            <artifactId>asa-common</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

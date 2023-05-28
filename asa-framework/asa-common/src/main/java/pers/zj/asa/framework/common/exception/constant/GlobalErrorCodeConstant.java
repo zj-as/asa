@@ -3,11 +3,11 @@ package pers.zj.asa.framework.common.exception.constant;
 import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 
 /**
- * 全局错误码常量
+ * <p>全局错误码常量</p>
  *
  * <p>0 - 999 为系统状态编码保留，一般情况下，使用
  * <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">HTTP 响应状态码</a>
- * ，HTTP 响应状态码作为业务使用表达能力偏弱，但是使用在系统层面还是非常不错的。
+ * 。HTTP 响应状态码作为业务使用表达能力偏弱，但是使用在系统层面还是非常不错的。</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -57,12 +57,12 @@ public interface GlobalErrorCodeConstant extends GlobalCodeConstant {
     ErrorCode UNKNOWN = new ErrorCode(999, "未知错误");
 
     /**
-     * 是否为服务端错误，参考 HTTP 5XX 错误码段
+     * <p>是否为服务端错误，参考 HTTP 5XX 错误码段</p><br/>
      *
      * @param code 错误码
      * @return {@code true} 是，{@code false} 否
      */
-    static Boolean isServerErrorCode(Integer code) {
+    static boolean isServerErrorCode(Integer code) {
         return code != null && code >= INTERNAL_SERVER_ERROR.getCode() && code <= INTERNAL_SERVER_ERROR.getCode() + 99;
     }
 

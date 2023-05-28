@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * 排序字段
+ * <p>排序字段</p>
  *
- * <p>类名加了 ing 的原因是，避免和 ES SortField 重名。
+ * <p>类名加了 ing 的原因是，避免和 ES SortField 重名。</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -34,7 +34,7 @@ public class SortingField implements Serializable {
     private String orderBy;
 
     /**
-     * 空构造方法，解决反序列化
+     * <p>空构造方法，解决反序列化</p>
      */
     public SortingField() {
 

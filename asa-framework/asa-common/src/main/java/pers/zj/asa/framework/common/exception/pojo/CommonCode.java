@@ -5,13 +5,15 @@ import pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant;
 import pers.zj.asa.framework.common.exception.constant.ServiceErrorCodeConstant;
 
 /**
- * 状态码对象
+ * <p>状态码对象</p>
  *
- * <p>全局状态码，占用 [0, 399] ，参见 {@link GlobalCodeConstant} ；
- * <p>全局错误码，占用 [400, 999] ，参见 {@link GlobalErrorCodeConstant} ；
- * <p>业务异常错误码，占用 [1 000 000 000, +∞) ，参见 {@link ServiceErrorCodeConstant} ；
+ * <ol>
+ *     <li>全局状态码，占用 [0, 399] ，参见 {@link GlobalCodeConstant}</li>
+ *     <li>全局错误码，占用 [400, 999] ，参见 {@link GlobalErrorCodeConstant}</li>
+ *     <li>业务异常错误码，占用 [1 000 000 000, +∞) ，参见 {@link ServiceErrorCodeConstant}</li>
+ * </ol>
  *
- * <p>TODO asa 20230512 状态码设计成对象的原因，为未来的 i18 国际化做准备。
+ * <p>TODO asa expend 20230512 ：状态码设计成对象的原因，为未来的 i18 国际化做准备。</p><br/>
  *
  * @author asa
  * @since 1.0.1

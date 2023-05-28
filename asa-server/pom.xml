@@ -30,6 +30,12 @@
             <artifactId>asa-module-infra-biz</artifactId>
             <version>${revision}</version>
         </dependency>
+
+        <dependency>
+            <groupId>pers.zj.asa</groupId>
+            <artifactId>asa-module-test-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -7,7 +7,7 @@ import pers.zj.asa.framework.common.exception.pojo.ErrorCode;
 import java.util.Objects;
 
 /**
- * 业务逻辑异常
+ * <p>业务逻辑异常</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -27,7 +27,7 @@ public class ServiceException extends RuntimeException {
     private String message;
 
     /**
-     * 空构造方法，避免反序列化问题
+     * <p>空构造方法，避免反序列化问题</p>
      */
     public ServiceException() {
 

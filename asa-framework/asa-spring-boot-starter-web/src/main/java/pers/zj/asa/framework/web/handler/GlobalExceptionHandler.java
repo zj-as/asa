@@ -2,6 +2,7 @@ package pers.zj.asa.framework.web.handler;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -23,7 +24,7 @@ import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeCon
 import static pers.zj.asa.framework.common.pojo.CommonResult.error;
 
 /**
- * 全局异常处理器
+ * <p>全局异常处理器</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -32,6 +33,36 @@ import static pers.zj.asa.framework.common.pojo.CommonResult.error;
 @AllArgsConstructor
 @Slf4j
 public class GlobalExceptionHandler {
+
+    /**
+     * 处理 SpringMVC 请求地址不存在异常
+     *
+     * <p>注意，它需要设置如下两个配置项：
+     * <p>1、spring.mvc.throw-exception-if-no-handler-found 为 true ；
+     * <p>2、spring.mvc.static-path-pattern 为 /statics/** 。
+     *
+     * @param ex 请求地址不存在异常
+     * @return 通用返回数据
+     */
+    @ExceptionHandler(NoHandlerFoundException.class)
+    public CommonResult<?> noHandlerFoundExceptionHandler(NoHandlerFoundException ex) {
+        log.warn("[noHandlerFoundExceptionHandler][请求地址不存在异常]", ex);
+        return error(NOT_FOUND.getCode(), String.format("请求地址不存在：%s", ex.getRequestURL()));
+    }
+
+    /**
+     * 处理 SpringMVC 请求方法不正确异常
+     *
+     * <p>例如说，A 接口的方法为 GET 方式，结果请求方法为 POST 方式，导致不匹配。
+     *
+     * @param ex 请求方法不正确异常
+     * @return 通用返回数据
+     */
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public CommonResult<?> httpRequestMethodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException ex) {
+        log.warn("[httpRequestMethodNotSupportedExceptionHandler][请求方法不正确异常]", ex);
+        return error(METHOD_NOT_ALLOWED.getCode(), String.format("请求方法不正确：%s", ex.getMessage()));
+    }
 
     /**
      * 处理 SpringMVC 请求参数缺失异常
@@ -59,6 +90,20 @@ public class GlobalExceptionHandler {
     public CommonResult<?> methodArgumentTypeMismatchExceptionHandler(MethodArgumentTypeMismatchException ex) {
         log.warn("[missingServletRequestParameterExceptionHandler][请求参数类型错误异常]", ex);
         return error(BAD_REQUEST.getCode(), String.format("请求参数类型错误：%s", ex.getMessage()));
+    }
+
+    /**
+     * TODO zj dev 20230528 ：处理 SpringMVC 请求参数
+     *
+     * <p>
+     *
+     * @param ex
+     * @return 通用返回数据
+     */
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public CommonResult<?> httpMessageNotReadableExceptionHandler(HttpMessageNotReadableException ex) {
+        log.error("[httpMessageNotReadableExceptionHandler][]", ex);
+        return error(BAD_REQUEST.getCode(), String.format("JSON 请求参数类型错误：%s", ex.getMessage()));
     }
 
     /**
@@ -111,36 +156,6 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * 处理 SpringMVC 请求地址不存在异常
-     *
-     * <p>注意，它需要设置如下两个配置项：
-     * <p>1、spring.mvc.throw-exception-if-no-handler-found 为 true ；
-     * <p>2、spring.mvc.static-path-pattern 为 /statics/** 。
-     *
-     * @param ex 请求地址不存在异常
-     * @return 通用返回数据
-     */
-    @ExceptionHandler(NoHandlerFoundException.class)
-    public CommonResult<?> noHandlerFoundExceptionHandler(NoHandlerFoundException ex) {
-        log.warn("[noHandlerFoundExceptionHandler][请求地址不存在异常]", ex);
-        return error(NOT_FOUND.getCode(), String.format("请求地址不存在：%s", ex.getRequestURL()));
-    }
-
-    /**
-     * 处理 SpringMVC 请求方法不正确异常
-     *
-     * <p>例如说，A 接口的方法为 GET 方式，结果请求方法为 POST 方式，导致不匹配。
-     *
-     * @param ex 请求方法不正确异常
-     * @return 通用返回数据
-     */
-    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
-    public CommonResult<?> httpRequestMethodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException ex) {
-        log.warn("[httpRequestMethodNotSupportedExceptionHandler][请求方法不正确异常]", ex);
-        return error(METHOD_NOT_ALLOWED.getCode(), String.format("请求方法不正确：%s", ex.getMessage()));
-    }
-
-    /**
      * 处理业务逻辑异常 {@code ServiceException}
      *
      * @param ex 业务逻辑异常
@@ -176,7 +191,7 @@ public class GlobalExceptionHandler {
      * @param ex 异常与错误
      * @return 通用返回数据
      */
-    @ExceptionHandler(value = Exception.class)
+    @ExceptionHandler(value = Throwable.class)
     public CommonResult<?> defaultExceptionHandler(HttpServletRequest request, Throwable ex) {
         // 打印异常日志
         log.error("[defaultExceptionHandler][未知异常]", ex);

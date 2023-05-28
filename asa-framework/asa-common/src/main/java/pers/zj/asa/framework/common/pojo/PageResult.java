@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * 分页结果
+ * <p>分页结果</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -38,7 +38,7 @@ public class PageResult<T> implements Serializable {
     private List<T> dataList;
 
     /**
-     * 空构造方法，解决反序列化
+     * <p>空构造方法，解决反序列化</p>
      */
     public PageResult() {
 

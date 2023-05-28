@@ -1,10 +1,10 @@
 package pers.zj.asa.framework.common.enums;
 
-import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant.*;
+import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant.ENUM_NOT_EXIST;
 import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.exception;
 
 /**
- * 通用状态枚举类
+ * <p>通用状态枚举类</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -28,10 +28,10 @@ public enum CommonStatusEnum {
     private final String name;
 
     /**
-     * 根据状态值创建枚举
+     * <p>根据状态值创建枚举</p><br/>
      *
      * @param status 状态值
-     * @return {@code CommonStatusEnum} 枚举
+     * @return {@link CommonStatusEnum} 枚举
      */
     public static CommonStatusEnum create(Integer status) {
         for (CommonStatusEnum commonStatusEnum : CommonStatusEnum.values()) {
@@ -56,7 +56,7 @@ public enum CommonStatusEnum {
     }
 
     /**
-     * 根据状态值获取状态名
+     * <p>根据状态值获取状态名</p><br/>
      *
      * @param status 状态值
      * @return {@code name} 状态名

@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.InputStream;
 
 /**
- * 图片工具类
+ * <p>图片工具类</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -15,12 +15,12 @@ import java.io.InputStream;
 public class ImageUtil {
 
     /**
-     * 判断输入流是否为图片
+     * <p>判断输入流是否为图片</p><br/>
      *
      * @param inputStream 输入流
      * @return {@code true} 是图片，{@code false} 不是图片
      */
-    public static Boolean isImage(InputStream inputStream) {
+    public static boolean isImage(InputStream inputStream) {
         if (inputStream == null) {
             return false;
         }
@@ -35,12 +35,12 @@ public class ImageUtil {
     }
 
     /**
-     * 判断文件是否为图片
+     * <p>判断文件是否为图片</p><br/>
      *
      * @param imageFile 图片文件
      * @return {@code true} 是图片，{@code false} 不是图片
      */
-    public static Boolean isImage(MultipartFile imageFile) {
+    public static boolean isImage(MultipartFile imageFile) {
         if (imageFile == null) {
             return false;
         }
@@ -53,7 +53,7 @@ public class ImageUtil {
     }
 
     /**
-     * 私有化构造器
+     * <p>私有化构造器</p>
      */
     private ImageUtil() {
 

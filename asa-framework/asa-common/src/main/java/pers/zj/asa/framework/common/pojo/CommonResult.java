@@ -12,7 +12,7 @@ import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeCon
 import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.exception;
 
 /**
- * 通用返回数据
+ * <p>通用返回数据</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -49,14 +49,14 @@ public class CommonResult<T> implements Serializable {
     private T data;
 
     /**
-     * 创建通用返回数据
+     * <p>创建通用返回数据</p><br/>
      *
      * @param success 请求结果
      * @param code 响应码
      * @param message 响应信息
      * @param data 响应数据
      * @param <T> 泛型，保证数据一致性
-     * @return {@code CommonResult} 通用返回数据
+     * @return {@link CommonResult} 通用返回数据
      */
     private static <T> CommonResult<T> createCommonResult(Boolean success, Integer code, String message, T data) {
         return new CommonResult<>(success, code, message, data);
@@ -110,31 +110,31 @@ public class CommonResult<T> implements Serializable {
     }
 
     /**
-     * 检查状态码是否是成功状态码
+     * <p>检查状态码是否是成功状态码</p><br/>
      *
      * @param code 状态码
      */
     private static void checkSuccessCode(Integer code) {
-        Boolean isSuccessCode = isSuccessCode(code);
+        boolean isSuccessCode = isSuccessCode(code);
         if (isSuccessCode) {
             throw exception(CODE_RETURN_ERROR);
         }
     }
 
     /**
-     * 检查状态码是否是错误状态码
+     * <p>检查状态码是否是错误状态码</p><br/
      *
      * @param code 状态码
      */
     private static void checkErrorCode(Integer code) {
-        Boolean isSuccessCode = isServerErrorCode(code);
+        boolean isSuccessCode = isServerErrorCode(code);
         if (isSuccessCode) {
             throw exception(CODE_RETURN_ERROR);
         }
     }
 
     /**
-     * 空构造方法，解决反序列化
+     * <p>空构造方法，解决反序列化</p>
      */
     public CommonResult() {
 
