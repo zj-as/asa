@@ -1,16 +1,17 @@
 <h1 align="center">🎉阿沙的基础框架项目🎉</h1>
 <br/>
 <p align="center">
-    <a>
+  <a href="https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.baomidou%22%20AND%20a%3A%22mybatis-plus%22">
+    <img alt="JDK-v8.0" src="https://img.shields.io/badge/JDK-v8.0-blue">
+  </a>
 
-![JDK](https://img.shields.io/badge/JDK-v8.0-blue)
-    </a>
-    <a>
-![SpringBoot](https://img.shields.io/badge/SpringBoot-v2.7.11-blue)
-    </a>
-    <a>
-![MIT License](https://img.shields.io/badge/license-MIT-green)
-</a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0">
+    <img alt="SpringBoot-v2.7.11" src="https://img.shields.io/badge/SpringBoot-v2.7.11-blue">
+  </a>
+
+  <a href="https://gitter.im/baomidou/mybatis-plus?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+    <img alt="license-MIT" src="https://img.shields.io/badge/license-MIT-green">
+  </a>
 </p>
 
 <br/>
