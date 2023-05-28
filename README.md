@@ -22,7 +22,7 @@
 > 
 > 👉[点击前往 GitHub 地址](https://github.com/YunaiV/ruoyi-vue-pro)
 >
-> 👉[点击前往 Gitee 地址](https://gitee.com/zhijiantianya/ruoyi-vue-pro)
+> 👉[点击前往 Gitee 地址](https://gitee.com/zj-as/asa)
 
 <br/>
 
