@@ -1,5 +1,5 @@
 # <div style="text-align: center;">🎉阿沙的基础框架项目🎉</div>
-
+<br/>
 <div style="text-align: center;">
 
 ![JDK](https://img.shields.io/badge/JDK-v8.0-blue)
@@ -7,7 +7,7 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 </div>
 
-
+<br/>
 
 ## 🌈项目地址<br/>
 
@@ -17,7 +17,7 @@
 >
 > 👉[点击前往 Gitee 地址](https://gitee.com/zhijiantianya/ruoyi-vue-pro)
 
-
+<br/>
 
 ## ⭐芋道源码 / ruoyi-vue-pro<br/>
 
@@ -25,7 +25,7 @@
 >
 > 👉[点击前往 Gitee 地址](https://gitee.com/zhijiantianya/ruoyi-vue-pro)
 
-
+<br/>
 
 ## 📋待完成工作
 
