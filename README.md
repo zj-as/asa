@@ -18,8 +18,6 @@
 
 ## 🌈项目地址<br/>
 
-> 该项目是参照 **芋道源码 / ruoyi-vue-pro** 开源项目搭建的个人学习框架
-> 
 > 👉[点击前往 GitHub 地址](https://github.com/zj-as/asa)
 >
 > 👉[点击前往 Gitee 地址](https://gitee.com/zj-as/asa)
@@ -28,6 +26,8 @@
 
 ## ⭐芋道源码 / ruoyi-vue-pro<br/>
 
+> 该项目是参照 **芋道源码 / ruoyi-vue-pro** 开源项目搭建的个人学习框架
+>
 > 👉[点击前往 GitHub 地址](https://github.com/YunaiV/ruoyi-vue-pro)
 >
 > 👉[点击前往 Gitee 地址](https://gitee.com/zhijiantianya/ruoyi-vue-pro)
