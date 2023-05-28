@@ -11,7 +11,7 @@ import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeCon
 import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.exception;
 
 /**
- * 参数校验工具类
+ * <p>参数校验工具类</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -19,9 +19,9 @@ import static pers.zj.asa.framework.common.exception.util.ServiceExceptionUtil.e
 public class ParamValidUtil {
 
     /**
-     * 参数校验
+     * <p>参数校验</p><br/>
      *
-     * @param bindingResult 绑定结果
+     * @param bindingResult 约束结果
      */
     public static void valid(@NonNull BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -68,10 +68,10 @@ public class ParamValidUtil {
     }
 
     /**
-     * 参数校验
+     * <p>参数校验</p><br/>
      *
-     * @param bindingResult 绑定结果
-     * @return 错误信息
+     * @param bindingResult 约束结果
+     * @return {@link String} 错误信息
      */
     public static String validParam(@NonNull BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -86,7 +86,7 @@ public class ParamValidUtil {
     }
 
     /**
-     * 私有化构造器
+     * <p>私有化构造器</p>
      */
     private ParamValidUtil() {
 

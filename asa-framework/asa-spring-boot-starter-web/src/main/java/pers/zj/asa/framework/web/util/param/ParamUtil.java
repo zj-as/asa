@@ -1,7 +1,7 @@
 package pers.zj.asa.framework.web.util.param;
 
 /**
- * 参数工具类
+ * <p>参数工具类</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -9,7 +9,7 @@ package pers.zj.asa.framework.web.util.param;
 public class ParamUtil {
 
     /**
-     * 私有化构造器
+     * <p>私有化构造器</p>
      */
     private ParamUtil() {
 
