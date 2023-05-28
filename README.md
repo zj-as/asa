@@ -1,9 +1,16 @@
 <h1 align="center">🎉阿沙的基础框架项目🎉</h1>
 <br/>
 <p align="center">
-    <a>![JDK](https://img.shields.io/badge/JDK-v8.0-blue)</a>
-    <a>![SpringBoot](https://img.shields.io/badge/SpringBoot-v2.7.11-blue)</a>
-    <a>![MIT License](https://img.shields.io/badge/license-MIT-green)</a>
+    <a>
+
+![JDK](https://img.shields.io/badge/JDK-v8.0-blue)
+    </a>
+    <a>
+![SpringBoot](https://img.shields.io/badge/SpringBoot-v2.7.11-blue)
+    </a>
+    <a>
+![MIT License](https://img.shields.io/badge/license-MIT-green)
+</a>
 </p>
 
 <br/>
