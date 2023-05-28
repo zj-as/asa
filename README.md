@@ -10,7 +10,7 @@
   </a>
 
   <a href="https://spdx.org/licenses/MIT" target="_blank">
-    <img alt="license-MIT" src="https://img.shields.io/badge/license-MIT-green">
+    <img alt="license-MIT" src="https://img.shields.io/badge/License-MIT-green">
   </a>
 </p>
 
@@ -20,7 +20,7 @@
 
 > 该项目是参照 **芋道源码 / ruoyi-vue-pro** 开源项目搭建的个人学习框架
 > 
-> 👉[点击前往 GitHub 地址](https://github.com/YunaiV/ruoyi-vue-pro)
+> 👉[点击前往 GitHub 地址](https://github.com/zj-as/asa)
 >
 > 👉[点击前往 Gitee 地址](https://gitee.com/zj-as/asa)
 
