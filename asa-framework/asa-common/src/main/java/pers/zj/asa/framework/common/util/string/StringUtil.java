@@ -11,7 +11,7 @@ import pers.zj.asa.framework.common.constant.StringPool;
 public class StringUtil extends CharSequenceUtil implements StringPool {
 
     /**
-     * <p>私有化构造器</p>
+     * 私有化构造器
      */
     private StringUtil() {
 

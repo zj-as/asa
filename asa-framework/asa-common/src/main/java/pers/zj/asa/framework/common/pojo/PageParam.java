@@ -36,7 +36,7 @@ public class PageParam implements Serializable {
     private Integer pageSize =  PAGE_SIZE;
 
     /**
-     * <p>空构造方法，解决反序列化</p>
+     * 空构造方法，解决反序列化
      */
     public PageParam() {
 

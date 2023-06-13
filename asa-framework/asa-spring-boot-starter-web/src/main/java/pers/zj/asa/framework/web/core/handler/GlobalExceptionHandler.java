@@ -1,4 +1,4 @@
-package pers.zj.asa.framework.web.handler;
+package pers.zj.asa.framework.web.core.handler;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +19,7 @@ import pers.zj.asa.framework.common.pojo.CommonResult;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import javax.validation.ValidationException;
 
 import static pers.zj.asa.framework.common.exception.constant.GlobalErrorCodeConstant.*;
 import static pers.zj.asa.framework.common.pojo.CommonResult.error;
@@ -33,6 +34,52 @@ import static pers.zj.asa.framework.common.pojo.CommonResult.error;
 @AllArgsConstructor
 @Slf4j
 public class GlobalExceptionHandler {
+
+    /**
+     * <p>处理所有异常</p>
+     *
+     * <p>主要是提供给 Filter 使用，因为 Filter 不走 SpringMVC 的流程，但是我们又需要兜底处理异常，所以这里提供一个全量的异常处理过程，保持逻辑统一。</p><br/
+     *
+     * @param request 请求
+     * @param ex 异常
+     * @return 通用返回数据
+     */
+    public CommonResult<?> allExceptionHandler(HttpServletRequest request, Throwable ex) {
+        if (ex instanceof MissingServletRequestParameterException) {
+            return missingServletRequestParameterExceptionHandler((MissingServletRequestParameterException) ex);
+        }
+        if (ex instanceof MethodArgumentTypeMismatchException) {
+            return methodArgumentTypeMismatchExceptionHandler((MethodArgumentTypeMismatchException) ex);
+        }
+        if (ex instanceof MethodArgumentNotValidException) {
+            return methodArgumentNotValidExceptionExceptionHandler((MethodArgumentNotValidException) ex);
+        }
+        if (ex instanceof BindException) {
+            return bindExceptionHandler((BindException) ex);
+        }
+        if (ex instanceof ConstraintViolationException) {
+            return constraintViolationExceptionHandler((ConstraintViolationException) ex);
+        }
+        if (ex instanceof ValidationException) {
+            return validationException((ValidationException) ex);
+        }
+        if (ex instanceof NoHandlerFoundException) {
+            return noHandlerFoundExceptionHandler(request, (NoHandlerFoundException) ex);
+        }
+        if (ex instanceof HttpRequestMethodNotSupportedException) {
+            return httpRequestMethodNotSupportedExceptionHandler((HttpRequestMethodNotSupportedException) ex);
+        }
+        if (ex instanceof RequestNotPermitted) {
+            return requestNotPermittedExceptionHandler(request, (RequestNotPermitted) ex);
+        }
+        if (ex instanceof ServiceException) {
+            return serviceExceptionHandler((ServiceException) ex);
+        }
+        if (ex instanceof AccessDeniedException) {
+            return accessDeniedExceptionHandler(request, (AccessDeniedException) ex);
+        }
+        return defaultExceptionHandler(request, ex);
+    }
 
     /**
      * 处理 SpringMVC 请求地址不存在异常

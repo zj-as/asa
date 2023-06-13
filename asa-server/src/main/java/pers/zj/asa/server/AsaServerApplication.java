@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 项目启动类
+ * <p>项目启动类</p><br/>
  *
  * @author asa
  * @since 1.0.1

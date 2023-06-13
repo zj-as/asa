@@ -15,7 +15,7 @@ import java.util.Objects;
 public class ServiceException extends RuntimeException {
 
     /**
-     * 业务错误码
+     * <p>业务错误码</p><br/>
      *
      * @see ServiceErrorCodeConstant
      */
@@ -27,7 +27,7 @@ public class ServiceException extends RuntimeException {
     private String message;
 
     /**
-     * <p>空构造方法，避免反序列化问题</p>
+     * 空构造方法，避免反序列化问题
      */
     public ServiceException() {
 

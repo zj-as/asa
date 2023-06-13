@@ -28,7 +28,7 @@ public class CommonResult<T> implements Serializable {
     private Boolean success;
 
     /**
-     * 响应码
+     * <p>响应码</p><br/>
      *
      * @see CommonCode#getCode()
      * @see ErrorCode#getCode()
@@ -36,7 +36,7 @@ public class CommonResult<T> implements Serializable {
     private Integer code;
 
     /**
-     * 响应信息
+     * <p>响应信息</p><br/>
      *
      * @see CommonCode#getMessage()
      * @see ErrorCode#getMessage()
@@ -134,7 +134,7 @@ public class CommonResult<T> implements Serializable {
     }
 
     /**
-     * <p>空构造方法，解决反序列化</p>
+     * 空构造方法，解决反序列化
      */
     public CommonResult() {
 

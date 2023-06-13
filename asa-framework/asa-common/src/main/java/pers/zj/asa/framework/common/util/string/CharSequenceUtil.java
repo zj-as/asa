@@ -9,6 +9,23 @@ package pers.zj.asa.framework.common.util.string;
 public class CharSequenceUtil {
 
     /**
+     * <p>字符串常量：{@code "null"}</p>
+     *
+     * <p>注意：{@code "null" != null}</p>
+     */
+    public static final String NULL = "null";
+
+    /**
+     * 字符串常量：空字符串 {@code ""}
+     */
+    public static final String EMPTY = "";
+
+    /**
+     * 字符串常量：空格符 {@code " "}
+     */
+    public static final String SPACE = " ";
+
+    /**
      * <p>判断字符串是否为空白，空白的定义如下：</p>
      *
      * <ol>
@@ -54,6 +71,30 @@ public class CharSequenceUtil {
      * <p>示例：</p>
      *
      * <ul>
+     *     <li>{@code CharSequenceUtil.isBlank(null)     // false}</li>
+     *     <li>{@code CharSequenceUtil.isBlank("")       // false}</li>
+     *     <li>{@code CharSequenceUtil.isBlank(" \t\n")  // false}</li>
+     *     <li>{@code CharSequenceUtil.isBlank("abc")    // true}</li>
+     * </ul>
+     *
+     * @param str 字符串
+     * @return {@code true} 是，{@code false} 否
+     */
+    public static boolean isNotBlank(CharSequence str) {
+        return !isBlank(str);
+    }
+
+    /**
+     * <p>判断字符串是否为空白，空白的定义如下：</p>
+     *
+     * <ol>
+     *     <li>{@code null}</li>
+     *     <li>空字符串：{@code ""}</li>
+     * </ol>
+     *
+     * <p>示例：</p>
+     *
+     * <ul>
      *     <li>{@code CharSequenceUtil.isBlank(null)     // true}</li>
      *     <li>{@code CharSequenceUtil.isBlank("")       // true}</li>
      *     <li>{@code CharSequenceUtil.isBlank(" \t\n")  // true}</li>
@@ -63,8 +104,12 @@ public class CharSequenceUtil {
      * @param str 字符串
      * @return {@code true} 是，{@code false} 否
      */
-    public static boolean isNotBlank(CharSequence str) {
-        return !isBlank(str);
+    public static boolean isEmpty(CharSequence str) {
+        return str == null || str.length() == 0;
+    }
+
+    public static boolean isNotEmpty(CharSequence str) {
+        return !isEmpty(str);
     }
 
 }

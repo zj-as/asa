@@ -14,4 +14,11 @@ import java.time.LocalTime;
  */
 public class LocalDateTimeUtil {
 
+    /**
+     * 私有化构造器
+     */
+    private LocalDateTimeUtil() {
+
+    }
+
 }

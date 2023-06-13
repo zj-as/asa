@@ -1,4 +1,4 @@
-package pers.zj.asa.framework.web.enums;
+package pers.zj.asa.framework.web.core.enums;
 
 /**
  * <p>前端标签类型枚举类</p><br/>

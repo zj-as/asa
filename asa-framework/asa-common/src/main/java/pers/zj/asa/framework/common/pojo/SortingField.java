@@ -34,7 +34,7 @@ public class SortingField implements Serializable {
     private String orderBy;
 
     /**
-     * <p>空构造方法，解决反序列化</p>
+     * 空构造方法，解决反序列化
      */
     public SortingField() {
 

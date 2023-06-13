@@ -57,18 +57,17 @@ public class RegexUtil implements RegexConstant {
     }
 
     /**
-     * <p>判断字符串是否是数值（小数也算）</p>
+     * <p>判断字符串是否是数值（包括小数、负数）</p>
      *
      * <p>示例：</p>
      * <ul>
-     *     <li>{@code PatternUtil.isNumberStr("100")     // true}</li>
-     *     <li>{@code PatternUtil.isNumberStr("001")     // true}</li>
-     *     <li>{@code PatternUtil.isNumberStr("1.01")    // true}</li>
-     *     <li>{@code PatternUtil.isNumberStr("01.10")   // true}</li>
-     *     <li>{@code PatternUtil.isNumberStr("100A")    // false}</li>
-     *     <li>{@code PatternUtil.isNumberStr("10.")     // false}</li>
-     *     <li>{@code PatternUtil.isNumberStr(".01")     // false}</li>
-     *     <li>{@code PatternUtil.isNumberStr("1-1")     // false}</li>
+     *     <li>{@code PatternUtil.isNumberStr("+001")     // true}</li>
+     *     <li>{@code PatternUtil.isNumberStr("-01.10")   // true}</li>
+     *     <li>{@code PatternUtil.isNumberStr("100A")     // false}</li>
+     *     <li>{@code PatternUtil.isNumberStr("+-100")    // false}</li>
+     *     <li>{@code PatternUtil.isNumberStr("10.")      // false}</li>
+     *     <li>{@code PatternUtil.isNumberStr(".01")      // false}</li>
+     *     <li>{@code PatternUtil.isNumberStr("1-1")      // false}</li>
      * </ul>
      *
      * @param str 字符串
@@ -79,7 +78,51 @@ public class RegexUtil implements RegexConstant {
     }
 
     /**
-     * <p>私有化构造器</p>
+     * <p>判断字符串是否是正数（包括小数）</p>
+     *
+     * <p>示例：</p>
+     * <ul>
+     *     <li>{@code PatternUtil.isNumberStr("+100")     // true}</li>
+     *     <li>{@code PatternUtil.isNumberStr("1.1")      // true}</li>
+     *     <li>{@code PatternUtil.isNumberStr("-100")     // false}</li>
+     * </ul>
+     *
+     * @param str 字符串
+     * @return {@code true} 是，{@code false} 不是
+     */
+    public static boolean isPositiveNumberStr(String str) {
+        return isMatch(MATCH_NUMBER_POSITIVE, str);
+    }
+
+    /**
+     * <p>判断字符串是否是负数（包括小数）</p>
+     *
+     * <p>示例：</p>
+     * <ul>
+     *     <li>{@code PatternUtil.isNumberStr("-001")     // true}</li>
+     *     <li>{@code PatternUtil.isNumberStr("-01.10")   // true}</li>
+     *     <li>{@code PatternUtil.isNumberStr("100")      // false}</li>
+     * </ul>
+     *
+     * @param str 字符串
+     * @return {@code true} 是，{@code false} 不是
+     */
+    public static boolean isNegativeNumberStr(String str) {
+        return isMatch(MATCH_NUMBER_NEGATIVE, str);
+    }
+
+    /**
+     * <p>判断字符串是否是手机号</p><br/>
+     *
+     * @param str 字符串
+     * @return {@code true} 是，{@code false} 不是
+     */
+    public static boolean isPhone(String str) {
+        return isMatch(MATCH_PHONE, str);
+    }
+
+    /**
+     * 私有化构造器
      */
     private RegexUtil() {
         

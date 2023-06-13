@@ -3,7 +3,7 @@ package pers.zj.asa.module.test.controller.vo;
 import lombok.Data;
 
 /**
- * <p>测试 request VO</p><br/>
+ * <p>测试 Request VO</p><br/>
  *
  * @author asa
  * @since 1.0.1

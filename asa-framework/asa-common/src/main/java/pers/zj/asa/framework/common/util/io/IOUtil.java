@@ -26,7 +26,7 @@ public class IOUtil {
     }
 
     /**
-     * <p>私有化构造器</p>
+     * 私有化构造器
      */
     private IOUtil() {
 

@@ -22,19 +22,16 @@
         <dependency>
             <groupId>pers.zj.asa</groupId>
             <artifactId>asa-module-system-biz</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>pers.zj.asa</groupId>
             <artifactId>asa-module-infra-biz</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>pers.zj.asa</groupId>
             <artifactId>asa-module-test-biz</artifactId>
-            <version>${revision}</version>
         </dependency>
     </dependencies>
 

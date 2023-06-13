@@ -54,6 +54,7 @@ public interface GlobalErrorCodeConstant extends GlobalCodeConstant {
     ErrorCode PARAM_FORMAT = new ErrorCode(706, "参数格式错误");
     ErrorCode CODE_RETURN_ERROR = new ErrorCode(800, "状态码返回错误");
     ErrorCode ENUM_NOT_EXIST = new ErrorCode(801, "枚举类型不存在");
+    ErrorCode KEY_VALUE_UNEQUAL_QUANTITY = new ErrorCode(802, "key 与 value 个数不相等");
     ErrorCode UNKNOWN = new ErrorCode(999, "未知错误");
 
     /**

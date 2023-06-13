@@ -42,7 +42,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * <p>私有化构造器</p>
+     * 私有化构造器
      */
     private ServiceExceptionUtil() {
 

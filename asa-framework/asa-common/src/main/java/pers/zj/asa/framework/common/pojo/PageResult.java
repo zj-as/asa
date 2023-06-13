@@ -38,7 +38,7 @@ public class PageResult<T> implements Serializable {
     private List<T> dataList;
 
     /**
-     * <p>空构造方法，解决反序列化</p>
+     * 空构造方法，解决反序列化
      */
     public PageResult() {
 

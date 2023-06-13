@@ -15,7 +15,7 @@ import java.util.Objects;
 public class ServerException extends RuntimeException {
 
     /**
-     * 全局错误码
+     * <p>全局错误码</p><br/>
      *
      * @see GlobalErrorCodeConstant
      */
@@ -27,7 +27,7 @@ public class ServerException extends RuntimeException {
     private String message;
 
     /**
-     * <p>空构造方法，避免反序列化问题</p>
+     * 空构造方法，避免反序列化问题
      */
     public ServerException() {
 

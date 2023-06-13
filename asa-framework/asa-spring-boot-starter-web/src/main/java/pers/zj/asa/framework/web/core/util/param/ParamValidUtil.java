@@ -1,4 +1,4 @@
-package pers.zj.asa.framework.web.util.param;
+package pers.zj.asa.framework.web.core.util.param;
 
 import org.springframework.lang.NonNull;
 import org.springframework.validation.BindingResult;
@@ -86,7 +86,7 @@ public class ParamValidUtil {
     }
 
     /**
-     * <p>私有化构造器</p>
+     * 私有化构造器
      */
     private ParamValidUtil() {
 

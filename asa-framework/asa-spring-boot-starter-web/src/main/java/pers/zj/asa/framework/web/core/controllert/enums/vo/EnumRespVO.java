@@ -1,12 +1,12 @@
-package pers.zj.asa.framework.web.controllert.enums.vo;
+package pers.zj.asa.framework.web.core.controllert.enums.vo;
 
 import pers.zj.asa.framework.common.enums.CommonStatusEnum;
-import pers.zj.asa.framework.web.enums.LabelTypeEnum;
+import pers.zj.asa.framework.web.core.enums.LabelTypeEnum;
 
 import java.util.Objects;
 
 /**
- * 枚举数据 response VO
+ * <p>枚举数据 Response VO</p><br/>
  *
  * @author asa
  * @since 1.0.1
@@ -24,7 +24,7 @@ public class EnumRespVO {
     private Object value;
 
     /**
-     * 前端标签类型
+     * <p>前端标签类型</p><br/>
      *
      * @see LabelTypeEnum
      */
@@ -36,7 +36,7 @@ public class EnumRespVO {
     private String remark;
 
     /**
-     * 根据枚举类型设置前端标签类型
+     * <p>根据枚举类型设置前端标签类型</p><br/>
      *
      * @param enumType 枚举类型
      */

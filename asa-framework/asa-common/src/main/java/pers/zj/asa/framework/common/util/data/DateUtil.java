@@ -13,4 +13,11 @@ import java.util.Calendar;
  */
 public class DateUtil {
 
+    /**
+     * 私有化构造器
+     */
+    private DateUtil() {
+
+    }
+
 }

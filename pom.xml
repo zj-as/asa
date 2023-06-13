@@ -26,7 +26,6 @@
         <module>asa-module-system</module>
         <module>asa-module-infra</module>
         <module>asa-module-test</module>
-        <!--        <module>asa-module-infra</module>-->
     </modules>
 
     <properties>

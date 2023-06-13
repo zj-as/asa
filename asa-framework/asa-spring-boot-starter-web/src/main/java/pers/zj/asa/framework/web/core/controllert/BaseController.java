@@ -1,4 +1,4 @@
-package pers.zj.asa.framework.web.controllert;
+package pers.zj.asa.framework.web.core.controllert;
 
 import org.springframework.lang.NonNull;
 import pers.zj.asa.framework.common.exception.pojo.CommonCode;

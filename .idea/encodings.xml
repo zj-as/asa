@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/asa-framework/asa-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/asa-framework/asa-spring-boot-starter-excel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/asa-framework/asa-spring-boot-starter-file/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/asa-framework/asa-spring-boot-starter-file/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/asa-framework/asa-spring-boot-starter-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/asa-module-infra/asa-module-infra-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/asa-module-infra/asa-module-infra-biz/src/main/java" charset="UTF-8" />

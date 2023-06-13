@@ -65,7 +65,7 @@ public class CharUtil implements CharPool {
     }
 
     /**
-     * <p>私有化构造器</p>
+     * 私有化构造器
      */
     public CharUtil() {
 
